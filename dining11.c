@@ -10,9 +10,9 @@ int main()
 { 
         pid_t cpid[5]; 
         char semname[5]; 
-        int i,j=0; 
+        int i,j=0,
         n = 5; 
-        for(i=0;i<n;i++) 
+        for(i=0;i<n;i++)
         { 
                 sprintf(semname,"%d",getpid()+i); 
                 sem[i]=sem_open(semname,O_CREAT|O_EXCL,0666,1); 
